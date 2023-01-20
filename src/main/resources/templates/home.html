@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns: th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+      <h1 th:text="${mensaje}"> Bienvenico jeison</h1th:text></h1>
+    <h2> hoy es [[${fecha}]]</h2> 
+    
+
+    <h1>Bienvenido</h1>
+    <h2>Oferta de trabajo</h2>
+    <h3 th:text="'Titulo:' + ${nombre}"></h3>
+    <h3 th:text="'Fecha pub:' + ${fechaPub}"></h3>
+    <h3 th:text="'Salario:' + ${salario}"></h3>
+    <h3 th:text="'vigente:' + ${vigente}"></h3>
+
+</body>
+</html>
