@@ -21,6 +21,7 @@ public class HomeController {
 	@GetMapping("/tabla")
 	public String  mostrarTabla(Model model) {
 		List<Vacante> lista = serviceVacantes.buscarTodas();
+		System.out.println("Lista->>>>>><<<" + lista);
 		model.addAttribute("vacantes", lista);
 		return "tabla";
 	}
@@ -42,16 +43,8 @@ public class HomeController {
 //		model.addAttribute("mensaje", "Bienvenidos a empleos App");
 //		model.addAttribute("fecha", new Date());
 		
-		String nombre ="Auxiliar de Contabilidad";
-		Date fechaPub = new Date();
-		double salario = 9000.0;
-		boolean vigente = true;
-		
-		model.addAttribute("nombre", nombre);
-		model.addAttribute("fechaPub", fechaPub);
-		model.addAttribute("salario", salario);
-		model.addAttribute("vigente", vigente);
-		
+		List<Vacante> lista = serviceVacantes.buscarTodas();
+		model.addAttribute("vacantes", lista);
 		return "home";
 	}
 	

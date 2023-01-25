@@ -36,7 +36,7 @@ public class VacantesServiceImpl implements IVacanteService {
 			vacante2.setImagen("empresa2.png");
 			
 			Vacante vacante3 = new Vacante();
-			vacante3.setId(2);
+			vacante3.setId(3);
 			vacante3.setNombre("Ingeniero electrico");
 			vacante3.setDescripcion("Solicitamos ingeniero electrico para diseñar puente peatonal");
 			vacante3.setFecha(sdf.parse("09-02-2022"));
@@ -45,7 +45,7 @@ public class VacantesServiceImpl implements IVacanteService {
 			
 			
 			Vacante vacante4 = new Vacante();
-			vacante4.setId(2);
+			vacante4.setId(4);
 			vacante4.setNombre("Diseñador grafico");
 			vacante4.setDescripcion("Solicitamos diseñador grafico para diseñar puente peatonal");
 			vacante4.setFecha(sdf.parse("09-02-2022"));
