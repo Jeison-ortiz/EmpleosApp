@@ -35,4 +35,6 @@ public class VacantesController {
 		System.out.println("borrandpo vacante con ID:" + idVacante);
 		return "vacantes/mensaje";
 	}
+	
+	
 }
