@@ -7,9 +7,27 @@ public class Vacante {
 	private Integer id;
 	private String nombre;
 	private String descripcion;
+	private String status;
 	private Date fecha;
 	private Double salario;
 	private Integer destacado;
+	private String detalles;
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getDetalles() {
+		return detalles;
+	}
+
+	public void setDetalles(String detalles) {
+		this.detalles = detalles;
+	}
+
 	private String imagen = "no-image.jpg";
 
 	public String getImagen() {
@@ -70,8 +88,8 @@ public class Vacante {
 
 	@Override
 	public String toString() {
-		return "Vacante [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", fecha=" + fecha
-				+ ", salario=" + salario + "]";
+		return "Vacante [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", status=" + status
+				+ ", fecha=" + fecha + ", salario=" + salario + ", destacado=" + destacado + ", detalles=" + detalles				+ ", imagen=" + imagen + "]";
 	}
 
 }

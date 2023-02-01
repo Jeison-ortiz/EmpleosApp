@@ -15,15 +15,15 @@ public class CategoriasController {
 		return "categorias/listCategorias";
 	}
 	
-	@GetMapping("/create")
+	@GetMapping("/crear")
 	public String crear() {
 		return "categorias/formCategorias";
 	}
 	
 	@PostMapping("/save")
-	public String guardar(@RequestParam("nombre") String nombre, @RequestParam("descripcion") String descripcion) {
+	public String guardar(@RequestParam("nombre") String nombre) {
 		System.out.println("Categoria: " + nombre);
-		System.out.println("Descripcion: " + descripcion);
+//		System.out.println("Descripcion: " + descripcion);
 		
 		return "categorias/listCategorias";
 	}

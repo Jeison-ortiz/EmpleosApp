@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -27,14 +29,23 @@ public class VacantesController {
 	
 	@GetMapping("/crear")
 	public String crear() {
+		System.out.println("Se llama al metodo post ");
 		return "vacantes/formVacantes";
 	}
 	
-	@GetMapping("/save")
-	public String guardar() {
+//	@PostMapping("/save")
+//	public String guardar(@ModelAttribute("vacante") Vacante vacante) {
+//		System.out.println("Vacante:--->> ");	
+//		return "vacantes/listVacantes";
+//	}
+	
+	@PostMapping("/save")
+	public String guardar(@RequestParam("nombre") String nombre, @RequestParam("descripcion") String descripcion,
+			@RequestParam("estatus") String status, @RequestParam("fecha") String fecha, @RequestParam("destacado") int destacado,
+			@RequestParam("salario") double salario, @RequestParam("detalles") String detalles) {
+		System.out.println("Vacante:--->> ");	
 		return "vacantes/listVacantes";
 	}
-	
 	
 	@GetMapping("/view/{id}")
 	public String verDetalle(@PathVariable("id") int idVacante, Model model) {
@@ -55,7 +66,7 @@ public class VacantesController {
 	
 	@InitBinder
 	public void initBinder(WebDataBinder webDataBinder) {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
 		webDataBinder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
 	}
 		
