@@ -39,10 +39,7 @@ public class HomeController {
 	}
 	
 	@GetMapping("/")
-	public String mostraHomeM(Model model) {
-//		model.addAttribute("mensaje", "Bienvenidos a empleos App");
-//		model.addAttribute("fecha", new Date());
-		
+	public String mostraHomeM(Model model) {		
 		List<Vacante> lista = serviceVacantes.buscarTodas();
 		model.addAttribute("vacantes", lista);
 		return "home";

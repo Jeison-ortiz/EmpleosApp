@@ -40,6 +40,13 @@ public class VacantesController {
 		return "vacantes/formVacantes";
 	}
 	
+	@GetMapping("/listVacantes")
+	public String listarVacantes(Model model) {
+		
+		System.out.println("Se llama a listar vacantes");
+		return "vacantes/listVacantes";
+	}
+	
 	@PostMapping("/save2")
 	public String guardar2(Vacante vacante, BindingResult result, RedirectAttributes attributes,
 			@RequestParam("archivoImagen") MultipartFile multiPart) {
