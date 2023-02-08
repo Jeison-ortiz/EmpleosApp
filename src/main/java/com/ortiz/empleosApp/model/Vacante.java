@@ -6,12 +6,21 @@ public class Vacante {
 
 	private Integer id;
 	private String nombre;
+	private String categoria;
 	private String descripcion;
 	private String status;
 	private Date fecha;
 	private Double salario;
 	private Integer destacado;
 	private String detalles;
+	
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
 	
 	public String getStatus() {
 		return status;

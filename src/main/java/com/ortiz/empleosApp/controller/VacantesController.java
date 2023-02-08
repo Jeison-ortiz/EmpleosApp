@@ -41,13 +41,6 @@ public class VacantesController {
 		return "vacantes/formVacantes";
 	}
 	
-//	@GetMapping("/listVacantes")
-//	public String listarVacantes(Model model) {
-//		
-//		System.out.println("Se llama a listar vacantes");
-//		return "vacantes/listVacantes";
-//	}
-	
 	@GetMapping("/listVacantes")
 	public String  mostrarTabla(Model model) {
 		List<Vacante> lista = vacanteService.buscarTodas();
