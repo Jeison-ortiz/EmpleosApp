@@ -12,6 +12,7 @@ public class Vacante {
 	private Double salario;
 	private Integer destacado;
 	private String detalles;
+	
 	public String getStatus() {
 		return status;
 	}

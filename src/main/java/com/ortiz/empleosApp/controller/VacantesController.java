@@ -3,6 +3,7 @@ package com.ortiz.empleosApp.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -40,10 +41,18 @@ public class VacantesController {
 		return "vacantes/formVacantes";
 	}
 	
+//	@GetMapping("/listVacantes")
+//	public String listarVacantes(Model model) {
+//		
+//		System.out.println("Se llama a listar vacantes");
+//		return "vacantes/listVacantes";
+//	}
+	
 	@GetMapping("/listVacantes")
-	public String listarVacantes(Model model) {
-		
-		System.out.println("Se llama a listar vacantes");
+	public String  mostrarTabla(Model model) {
+		List<Vacante> lista = vacanteService.buscarTodas();
+		System.out.println("Lista->>>>>><<<" + lista);
+		model.addAttribute("vacantes", lista);
 		return "vacantes/listVacantes";
 	}
 	
