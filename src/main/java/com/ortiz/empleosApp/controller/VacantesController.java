@@ -70,7 +70,7 @@ public class VacantesController {
 		vacanteService.guardar(vacante);
 		attributes.addFlashAttribute("msg", "Registro guardado");
 		System.out.println("Vacante ome: " + vacante);
-		return "redirect:/vacantes/home";
+		return "redirect:/vacantes/listVacantes";
 	}
 			
 //	@PostMapping("/save")
