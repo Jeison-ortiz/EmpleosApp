@@ -29,9 +29,7 @@ public class CategoriasController {
 	
 	@PostMapping("/save")
 	public String guardar(@RequestParam("nombre") String nombre) {
-		System.out.println("Categoria: " + nombre);
-//		System.out.println("Descripcion: " + descripcion);
-		
+		System.out.println("Categoria: " + nombre);		
 		return "categorias/listCategorias";
 	}
 }

@@ -92,6 +92,5 @@ public class Vacante {
 				+ ", salario=" + salario + ", destacado=" + destacado + ", imagen=" + imagen + ", status=" + status
 				+ ", detalles=" + detalles + ", categoria=" + categoria + "]";
 	}
-	
-	
+
 }

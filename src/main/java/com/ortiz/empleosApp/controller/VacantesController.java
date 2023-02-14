@@ -87,7 +87,6 @@ public class VacantesController {
 		Vacante vacante = vacanteService.buscarPorId(idVacante);
 		model.addAttribute("vacante", vacante);
 		System.out.println("Vacante:" + vacante);
-		//TODO Buscar los detalles en la base de datos
 		return "detalle";
 	}
 	
