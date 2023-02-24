@@ -30,8 +30,7 @@ public class VacantesServiceJpa implements IVacanteService {
 
 	@Override
 	public void guardar(Vacante vacante) {
-		vacantesRepo.save(vacante);
-		
+		vacantesRepo.save(vacante);	
 	}
 
 }
