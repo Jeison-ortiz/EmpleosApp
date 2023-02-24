@@ -44,6 +44,14 @@
 			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
 
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+		<version>6.0.1</version>
+	</dependency>
+		
+
 
 	</dependencies>
 
